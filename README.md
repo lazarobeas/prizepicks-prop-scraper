@@ -6,7 +6,8 @@ You can find the webscraper inside the repo along with a test file. _*ppWebScrap
 
 - Selenium
 - Pandas
-- ChromeDriver (use undetected_selenium if you are having issues bypassing Cloudflare)
+- ChromeDriver 
+- undetected_selenium if you are having issues bypassing Cloudflare
 
 
 
