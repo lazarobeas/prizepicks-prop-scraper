@@ -7,7 +7,7 @@ You can find the webscraper inside the repo along with a test file. _*ppWebScrap
 - Selenium
 - Pandas
 - ChromeDriver 
-- undetected_selenium if you are having issues bypassing Cloudflare
+- undetected_chromedriver
 
 
 
@@ -27,6 +27,12 @@ Once you downloaded the file, you will have to edit the PATH directory for your 
 python ppWebScraper.py
 ```
 The program should now run and print a portion of the results along with a CSV file. 
+
+## v1.2
+- Users were reporting issues with the program getting flagged by Cloudflare.
+- Added undetected_chromedriver functionality to circumvent this issue.
+- Added Ability to switch sports to scrape.
+ 
 
 ## License
 
