@@ -13,7 +13,6 @@ driver = uc.Chrome()
 
 ###########################################################################
 
-#   THIS SOFTWARE IS ONLY FOR PERSONAL USE, COMMERCIAL USE IS NOT ALLOWED
 
 # Scraping PrizePicks
 driver.get("https://app.prizepicks.com/")
