@@ -14,30 +14,24 @@ driver = uc.Chrome()
 ###########################################################################
 
 
-# Scraping PrizePicks
 driver.get("https://app.prizepicks.com/")
 time.sleep(3)
 
-# Waiting and closes popup
 WebDriverWait(driver, 15).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "close")))
 time.sleep(3)
 driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div/div[3]/button").click()
 time.sleep(3)
 
-# Creating tables for players
 ppPlayers = []
 
 # CHANGE MLB TO ANY SPORT THAT YOU LIKE!!!!! IF THE SPORT IS NOT OFFERED ON PP THEN THE PROGRAM WILL RUN AN ERROR AND EXIT.
 driver.find_element(By.XPATH, "//div[@class='name'][normalize-space()='MLB']").click()
 time.sleep(5)
 
-# Waits until stat container element is viewable
 stat_container = WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.CLASS_NAME, "stat-container")))
 
-# Finding all the stat elements within the stat-container
 categories = driver.find_element(By.CSS_SELECTOR, ".stat-container").text.split('\n')
 
-# Collecting categories
 for category in categories:
     driver.find_element(By.XPATH, f"//div[text()='{category}']").click()
 
